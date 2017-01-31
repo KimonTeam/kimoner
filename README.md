@@ -3,7 +3,7 @@
 Kimoner is the base Rails application used at
 [thoughtbot](https://thoughtbot.com/).
 
-  ![Kimoner boy](http://media.tumblr.com/1TEAMALpseh5xzf0Jt6bcwSMo1_400.png)
+  ![Kimoner boy](http://imageog.flaticon.com/icons/png/512/20/20733.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF)
 
 ## Installation
 
