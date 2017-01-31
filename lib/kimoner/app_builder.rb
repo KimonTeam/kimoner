@@ -199,25 +199,27 @@ config.public_file_server.headers = {
     end
 
     def create_shared_flashes
-      copy_file "_flashes.html.erb", "app/views/application/_flashes.html.erb"
+      copy_file "_flashes.html.slim", "app/views/application/_flashes.html.slim"
       copy_file "flashes_helper.rb", "app/helpers/flashes_helper.rb"
     end
 
     def create_shared_javascripts
-      copy_file '_javascript.html.erb', 'app/views/application/_javascript.html.erb'
+      copy_file '_javascript.html.slim', 'app/views/application/_javascript.html.slim'
     end
 
     def create_shared_css_overrides
       copy_file(
-        "_css_overrides.html.erb",
-        "app/views/application/_css_overrides.html.erb",
+        "_css_overrides.html.slim",
+        "app/views/application/_css_overrides.html.slim",
       )
     end
 
     def create_application_layout
-      template 'kimoner_layout.html.erb.erb',
-        'app/views/layouts/application.html.erb',
-        force: true
+      copy_file(
+        'kimoner_layout.html.slim',
+        'app/views/layouts/application.html.slim'
+      )
+      FileUtils.rm('app/views/layouts/application.html.erb')
     end
 
     def use_postgres_config_template
