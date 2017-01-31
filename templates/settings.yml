@@ -1,0 +1,8 @@
+# If you some common configurations to share in your app
+# you can write them here as you would with a standard YAML file.
+# They can be accessed through:
+#   in this file:
+#   your_key: 4
+#
+#   in your app:
+#   Settings.default.your_key

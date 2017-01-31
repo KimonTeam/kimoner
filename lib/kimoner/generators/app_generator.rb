@@ -57,6 +57,7 @@ module Kimoner
       invoke :setup_spring
       invoke :generate_default
       invoke :add_guard
+      invoke :add_settings
       invoke :outro
     end
 
@@ -231,6 +232,11 @@ module Kimoner
     def add_guard
       run("spring stop")
       generate("kimoner:guard")
+    end
+
+    def add_settings
+      run("spring stop")
+      generate("kimoner:settings")
     end
 
     def outro
