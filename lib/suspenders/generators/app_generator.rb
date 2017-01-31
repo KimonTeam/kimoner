@@ -1,7 +1,7 @@
 require 'rails/generators'
 require 'rails/generators/rails/app/app_generator'
 
-module Suspenders
+module Kimoner
   class AppGenerator < Rails::Generators::AppGenerator
     hide!
 
@@ -17,10 +17,10 @@ module Suspenders
     class_option :github, type: :string, default: nil,
       desc: "Create Github repository and add remote origin pointed to repo"
 
-    class_option :version, type: :boolean, aliases: "-v", group: :suspenders,
-      desc: "Show Suspenders version number and quit"
+    class_option :version, type: :boolean, aliases: "-v", group: :kimoner,
+      desc: "Show Kimoner version number and quit"
 
-    class_option :help, type: :boolean, aliases: '-h', group: :suspenders,
+    class_option :help, type: :boolean, aliases: '-h', group: :kimoner,
       desc: "Show this help message and quit"
 
     class_option :path, type: :string, default: nil,
@@ -30,17 +30,17 @@ module Suspenders
       desc: "Skip Test Unit"
 
     def finish_template
-      invoke :suspenders_customization
+      invoke :kimoner_customization
       super
     end
 
-    def suspenders_customization
+    def kimoner_customization
       invoke :customize_gemfile
       invoke :setup_development_environment
       invoke :setup_test_environment
       invoke :setup_production_environment
       invoke :setup_secret_token
-      invoke :create_suspenders_views
+      invoke :create_kimoner_views
       invoke :configure_app
       invoke :copy_miscellaneous_files
       invoke :customize_error_pages
@@ -122,8 +122,8 @@ module Suspenders
       build :setup_secret_token
     end
 
-    def create_suspenders_views
-      say 'Creating suspenders views'
+    def create_kimoner_views
+      say 'Creating kimoner views'
       build :create_partials_directory
       build :create_shared_flashes
       build :create_shared_javascripts
@@ -223,23 +223,23 @@ module Suspenders
 
     def generate_default
       run("spring stop")
-      generate("suspenders:static")
-      generate("suspenders:stylesheet_base")
+      generate("kimoner:static")
+      generate("kimoner:stylesheet_base")
     end
 
     def outro
-      say 'Congratulations! You just pulled our suspenders.'
+      say 'Congratulations! You just pulled our kimoner.'
       say honeybadger_outro
     end
 
     def self.banner
-      "suspenders #{arguments.map(&:usage).join(' ')} [options]"
+      "kimoner #{arguments.map(&:usage).join(' ')} [options]"
     end
 
     protected
 
     def get_builder_class
-      Suspenders::AppBuilder
+      Kimoner::AppBuilder
     end
 
     def using_active_record?

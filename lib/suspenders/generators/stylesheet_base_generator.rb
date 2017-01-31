@@ -1,6 +1,6 @@
 require "rails/generators"
 
-module Suspenders
+module Kimoner
   class StylesheetBaseGenerator < Rails::Generators::Base
     source_root File.expand_path(
       File.join("..", "..", "..", "templates"),

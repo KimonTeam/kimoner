@@ -7,7 +7,7 @@ to abide by the thoughtbot [code of conduct].
 
 Fork the repo:
 
-    git clone git@github.com:thoughtbot/suspenders.git
+    git clone git@github.com:thoughtbot/kimoner.git
 
 Set up your machine:
 
@@ -37,7 +37,7 @@ Push to your fork.
 [Submit a pull request][pr].
 
 [commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
-[pr]: https://github.com/thoughtbot/suspenders/compare/
+[pr]: https://github.com/thoughtbot/kimoner/compare/
 
 If [Hound] catches style violations,
 fix them.

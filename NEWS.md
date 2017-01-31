@@ -25,7 +25,7 @@
 
 * Update to Rails 5
 * Drop quiet_assets
-* Drop unneeded `suspenders` aliases: `--skip-test-unit`, `--skip-turbolinks`,
+* Drop unneeded `kimoner` aliases: `--skip-test-unit`, `--skip-turbolinks`,
   `--skip-bundle`. Drops `-G` that clashes with Rails’ `--skip-git` alias.
 
 1.40.0 (June 25, 2016)
@@ -36,24 +36,24 @@
   defined)
 * Update comment around Pipelines: it is now a Heroku core plugin
 * Drop unneeded `WEB_CONCURRENCY` from `app.json` file
-* Introduce a `suspenders:stylesheet_base` generator. The `application.scss`
+* Introduce a `kimoner:stylesheet_base` generator. The `application.scss`
   must list the imports in a specific order. This removes the `application.css`.
 
 1.39.0 (May 25, 2016)
 
 * Update to Ruby 2.3.1
 * Make new apps "deployable to Heroku" by default.
-* Make the help text returned when running `suspenders -h` Suspenders specific
+* Make the help text returned when running `kimoner -h` Kimoner specific
 * Bugfix: Configure `static_cache_control` in production environment
 * Replace NewRelic with Skylight
 * Drop initializer for disabling XML parser
-* Start moving suspenders features into different Rails Generators
+* Start moving kimoner features into different Rails Generators
 * Set default `application_host` in Heroku
 * Update the viewport meta tag
 
 1.38.1 (April 20, 2016)
 
-* Bugfix: add bitters as suspenders’ dependency back.
+* Bugfix: add bitters as kimoner’ dependency back.
 
 1.38.0 (April 15, 2016)
 
@@ -99,7 +99,7 @@
 * Fix `block_unknown_urls` deprecation warning with capybara_webkit when running
   Javascript tests
 * Inherit staging's `action_mailer_host` config from production
-* Suspenders command line responds to `-v` and `--version` options
+* Kimoner command line responds to `-v` and `--version` options
 * Clean up `bin/rake`
 * Remove `email_validator` gem from generated Gemfile
 * Fix Circle deploys by removing redundant remote
@@ -149,7 +149,7 @@
 
 * Generate rake, rails and rspec binstubs with Spring
 * Remove Capybara and use RSpec 3.2 for development
-* Improves suspenders' test suite speed
+* Improves kimoner' test suite speed
 * Refills `flashes.scss` bugfix
 
 1.28.0 (May 9, 2015)
@@ -198,7 +198,7 @@
 
 1.24.0 (February 3, 2015)
 
-* Remove things in Suspenders that Rails does for us now.
+* Remove things in Kimoner that Rails does for us now.
 * Document how to use the `title` view helper.
 * Improve speed of bundling in `bin/setup` script.
 * Set ENV variable to make out-of-the-box Heroku static asset experience better.
@@ -220,7 +220,7 @@
 1.22.0 (January 11, 2015)
 
 * Allow additional
-  [Heroku flags](https://github.com/thoughtbot/suspenders#heroku)
+  [Heroku flags](https://github.com/thoughtbot/kimoner#heroku)
   such as `--addons` and `--region`.
 * Use RSpec 3.1.0.
 * Use Travis' new Docker container infrastructure
@@ -303,9 +303,9 @@
 
 1.14.0 (June 11, 2014)
 
-* Set up Bitters during Suspenders setup. http://bitters.bourbon.io/
+* Set up Bitters during Kimoner setup. http://bitters.bourbon.io/
 * Remove SimpleCov.
-* Force Suspenders to use a particular Rails version (4.1.1).
+* Force Kimoner to use a particular Rails version (4.1.1).
 * Use RSpec 2.x until Travis/Capybara issues resolve.
 * Set `viewport` to `initial-scale=1`.
 
@@ -317,7 +317,7 @@
 
 1.12.0 (May 26, 2014)
 
-* Fix `rake dev:prime` now that Suspenders-generated apps require some `ENV`
+* Fix `rake dev:prime` now that Kimoner-generated apps require some `ENV`
   variables to be set.
 * Ensure `EMAIL_RECIPIENTS` is set on staging.
 * Clear `ActionMailer` deliveries before every test.

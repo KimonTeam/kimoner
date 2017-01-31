@@ -4,20 +4,20 @@ RSpec.describe "Suspend a new project with default configuration" do
   before(:all) do
     drop_dummy_database
     remove_project_directory
-    run_suspenders
+    run_kimoner
     setup_app_dependencies
   end
 
   it "uses custom Gemfile" do
     gemfile_file = IO.read("#{project_path}/Gemfile")
     expect(gemfile_file).to match(
-      /^ruby "#{Suspenders::RUBY_VERSION}"$/,
+      /^ruby "#{Kimoner::RUBY_VERSION}"$/,
     )
     expect(gemfile_file).to match(
       /^gem "autoprefixer-rails"$/,
     )
     expect(gemfile_file).to match(
-      /^gem "rails", "#{Suspenders::RAILS_VERSION}"$/,
+      /^gem "rails", "#{Kimoner::RAILS_VERSION}"$/,
     )
   end
 
@@ -29,7 +29,7 @@ RSpec.describe "Suspend a new project with default configuration" do
     end
   end
 
-  it "creates .ruby-version from Suspenders .ruby-version" do
+  it "creates .ruby-version from Kimoner .ruby-version" do
     ruby_version_file = IO.read("#{project_path}/.ruby-version")
 
     expect(ruby_version_file).to eq "#{RUBY_VERSION}\n"
@@ -243,7 +243,7 @@ RSpec.describe "Suspend a new project with default configuration" do
   end
 
   def app_name
-    SuspendersTestHelpers::APP_NAME
+    KimonerTestHelpers::APP_NAME
   end
 
   it "adds high_voltage" do

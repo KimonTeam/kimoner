@@ -1,19 +1,19 @@
-# Suspenders [![Build Status](https://secure.travis-ci.org/thoughtbot/suspenders.svg?branch=master)](http://travis-ci.org/thoughtbot/suspenders)
+# Kimoner [![Build Status](https://secure.travis-ci.org/thoughtbot/kimoner.svg?branch=master)](http://travis-ci.org/thoughtbot/kimoner)
 
-Suspenders is the base Rails application used at
+Kimoner is the base Rails application used at
 [thoughtbot](https://thoughtbot.com/).
 
-  ![Suspenders boy](http://media.tumblr.com/1TEAMALpseh5xzf0Jt6bcwSMo1_400.png)
+  ![Kimoner boy](http://media.tumblr.com/1TEAMALpseh5xzf0Jt6bcwSMo1_400.png)
 
 ## Installation
 
-First install the suspenders gem:
+First install the kimoner gem:
 
-    gem install suspenders
+    gem install kimoner
 
 Then run:
 
-    suspenders projectname
+    kimoner projectname
 
 This will create a Rails app in `projectname` using the latest version of Rails.
 
@@ -25,7 +25,7 @@ This will create a Rails app in `projectname` using the latest version of Rails.
 
 ## Gemfile
 
-To see the latest and greatest gems, look at Suspenders'
+To see the latest and greatest gems, look at Kimoner'
 [Gemfile](templates/Gemfile.erb), which will be appended to the default
 generated projectname/Gemfile.
 
@@ -91,7 +91,7 @@ And testing gems like:
 
 ## Other goodies
 
-Suspenders also comes with:
+Kimoner also comes with:
 
 * The [`./bin/setup`][setup] convention for new developer setup
 * The `./bin/deploy` convention for deploying to Heroku
@@ -111,8 +111,8 @@ Suspenders also comes with:
 [setup]: https://robots.thoughtbot.com/bin-setup
 [compress]: https://robots.thoughtbot.com/content-compression-with-rack-deflater
 [pool]: https://devcenter.heroku.com/articles/concurrency-and-database-connections
-[binstub]: https://github.com/thoughtbot/suspenders/pull/282
-[i18n]: https://github.com/thoughtbot/suspenders/pull/304
+[binstub]: https://github.com/thoughtbot/kimoner/pull/282
+[i18n]: https://github.com/thoughtbot/kimoner/pull/304
 [circle]: https://circleci.com/docs
 [hound]: https://houndci.com
 [segment]: https://segment.com
@@ -121,7 +121,7 @@ Suspenders also comes with:
 
 You can optionally create Heroku staging and production apps:
 
-    suspenders app --heroku true
+    kimoner app --heroku true
 
 This:
 
@@ -135,7 +135,7 @@ This:
 
 You can optionally specify alternate Heroku flags:
 
-    suspenders app \
+    kimoner app \
       --heroku true \
       --heroku-flags "--region eu --addons sendgrid,ssl"
 
@@ -148,7 +148,7 @@ See all possible Heroku flags:
 This will initialize a new git repository for your Rails app. You can
 bypass this with the `--skip-git` option:
 
-    suspenders app --skip-git true
+    kimoner app --skip-git true
 
 ## GitHub
 
@@ -156,7 +156,7 @@ You can optionally create a GitHub repository for the suspended Rails app. It
 requires that you have [Hub](https://github.com/github/hub) on your system:
 
     curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
-    suspenders app --github organization/project
+    kimoner app --github organization/project
 
 This has the same effect as running:
 
@@ -164,7 +164,7 @@ This has the same effect as running:
 
 ## Spring
 
-Suspenders uses [spring](https://github.com/rails/spring) by default.
+Kimoner uses [spring](https://github.com/rails/spring) by default.
 It makes Rails applications load faster, but it might introduce confusing issues
 around stale code not being refreshed.
 If you think your application is running old code, run `spring stop`.
@@ -172,10 +172,10 @@ And if you'd rather not use spring, add `DISABLE_SPRING=1` to your login file.
 
 ## Dependencies
 
-Suspenders requires the latest version of Ruby.
+Kimoner requires the latest version of Ruby.
 
-Some gems included in Suspenders have native extensions. You should have GCC
-installed on your machine before generating an app with Suspenders.
+Some gems included in Kimoner have native extensions. You should have GCC
+installed on your machine before generating an app with Kimoner.
 
 Use [OS X GCC Installer](https://github.com/kennethreitz/osx-gcc-installer/) for
 Snow Leopard (OS X 10.6).
@@ -193,7 +193,7 @@ PostgreSQL needs to be installed and running for the `db:create` rake task.
 ## Issues
 
 If you have problems, please create a
-[GitHub Issue](https://github.com/thoughtbot/suspenders/issues).
+[GitHub Issue](https://github.com/thoughtbot/kimoner/issues).
 
 ## Contributing
 
@@ -201,11 +201,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Thank you, [contributors]!
 
-[contributors]: https://github.com/thoughtbot/suspenders/graphs/contributors
+[contributors]: https://github.com/thoughtbot/kimoner/graphs/contributors
 
 ## License
 
-Suspenders is Copyright © 2008-2016 thoughtbot.
+Kimoner is Copyright © 2008-2016 thoughtbot.
 It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
@@ -215,7 +215,7 @@ and may be redistributed under the terms specified in the [LICENSE] file.
 
 ![thoughtbot](https://thoughtbot.com/logo.png)
 
-Suspenders is maintained and funded by thoughtbot, inc.
+Kimoner is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!

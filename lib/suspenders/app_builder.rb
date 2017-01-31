@@ -1,8 +1,8 @@
 require "forwardable"
 
-module Suspenders
+module Kimoner
   class AppBuilder < Rails::AppBuilder
-    include Suspenders::Actions
+    include Kimoner::Actions
     extend Forwardable
 
     def_delegators :heroku_adapter,
@@ -20,7 +20,7 @@ module Suspenders
     end
 
     def gitignore
-      copy_file "suspenders_gitignore", ".gitignore"
+      copy_file "kimoner_gitignore", ".gitignore"
     end
 
     def gemfile
@@ -215,7 +215,7 @@ config.public_file_server.headers = {
     end
 
     def create_application_layout
-      template 'suspenders_layout.html.erb.erb',
+      template 'kimoner_layout.html.erb.erb',
         'app/views/layouts/application.html.erb',
         force: true
     end
@@ -232,7 +232,7 @@ config.public_file_server.headers = {
     def replace_gemfile(path)
       template 'Gemfile.erb', 'Gemfile', force: true do |content|
         if path
-          content.gsub(%r{gem .suspenders.}) { |s| %{#{s}, path: "#{path}"} }
+          content.gsub(%r{gem .kimoner.}) { |s| %{#{s}, path: "#{path}"} }
         else
           content
         end
@@ -240,7 +240,7 @@ config.public_file_server.headers = {
     end
 
     def set_ruby_to_version_being_used
-      create_file '.ruby-version', "#{Suspenders::RUBY_VERSION}\n"
+      create_file '.ruby-version', "#{Kimoner::RUBY_VERSION}\n"
     end
 
     def enable_database_cleaner

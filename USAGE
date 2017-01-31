@@ -1,5 +1,5 @@
 Description:
-    Suspenders is a Rails template with thoughtbot standard
+    Kimoner is a Rails template with Kimon standard
     defaults, ready to deploy to Heroku.
 
     For full details on the changes we've made compared to
@@ -7,7 +7,7 @@ Description:
         https://github.com/thoughtbot/suspenders
 
 Example:
-    suspenders ~/Code/weblog
+    kimoners ~/Code/weblog
 
     This generates a Rails installation in ~/Code/weblog configured
     with our preferred defaults.
