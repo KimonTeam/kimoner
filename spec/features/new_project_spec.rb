@@ -259,6 +259,17 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(gemfile).to match(/refills/)
   end
 
+  it "adds and configures guard, for RSpec and live reload" do
+    gemfile = read_project_file("Gemfile")
+
+    expect(gemfile).to match(/guard/)
+    expect(gemfile).to match(/guard-rspec/)
+    expect(gemfile).to match(/guard-livereload/)
+    expect(gemfile).to match(/rack-livereload/)
+
+    expect(development_config).to match(/config\.middleware\.insert_after\(ActionDispatch::Static, Rack::LiveReload\)/)
+  end
+
   it "configures bourbon, neat, and refills" do
     flashes_path = %w(app assets stylesheets refills _flashes.scss)
     expect(read_project_file(flashes_path)).to match(/\$flashes/m)

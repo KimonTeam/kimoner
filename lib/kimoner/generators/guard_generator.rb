@@ -23,8 +23,12 @@ module Kimoner
     end
 
     def insert_rack_livereload
-      config = "config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)"
+      config = <<-RUBY
 
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+      RUBY
+      
       inject_into_file(
         "config/environments/development.rb",
         config,
