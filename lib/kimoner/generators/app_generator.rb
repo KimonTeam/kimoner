@@ -56,6 +56,7 @@ module Kimoner
       invoke :setup_bundler_audit
       invoke :setup_spring
       invoke :generate_default
+      invoke :add_guard
       invoke :outro
     end
 
@@ -225,6 +226,11 @@ module Kimoner
       run("spring stop")
       generate("kimoner:static")
       generate("kimoner:stylesheet_base")
+    end
+
+    def add_guard
+      run("spring stop")
+      generate("kimoner:guard")
     end
 
     def outro
