@@ -21,5 +21,15 @@ module Kimoner
         force: true,
       )
     end
+
+    def insert_rack_livereload
+      config = "config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)"
+
+      inject_into_file(
+        "config/environments/development.rb",
+        config,
+        after: "config.action_mailer.raise_delivery_errors = true\n",
+      )
+    end
   end
 end
