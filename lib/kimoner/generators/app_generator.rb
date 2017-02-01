@@ -59,6 +59,7 @@ module Kimoner
       invoke :add_guard
       invoke :add_flash_types
       invoke :add_settings
+      invoke :add_friendly_id
       invoke :outro
     end
 
@@ -246,6 +247,11 @@ module Kimoner
     def add_settings
       run("spring stop")
       generate("kimoner:settings")
+    end
+
+    def add_friendly_id
+      run("spring stop")
+      generate("kimoner:friendly_id")
     end
 
     def outro
