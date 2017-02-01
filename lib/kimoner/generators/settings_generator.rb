@@ -6,7 +6,7 @@ module Kimoner
       File.join("..", "..", "..", "templates"),
       File.dirname(__FILE__))
 
-    def add_guard_gems
+    def add_config_gem
       gem "config"
       Bundler.with_clean_env { run "bundle install" }
     end

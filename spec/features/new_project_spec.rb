@@ -283,6 +283,13 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(File).to exist("#{project_path}/config/settings.yml")
   end
 
+  it "adds and installs friendly_id" do
+    gemfile = read_project_file("Gemfile")
+
+    expect(gemfile).to match(/friendly_id/)
+    expect(File).to exist("#{project_path}/config/initializers/friendly_id.rb")
+  end
+
   it "configures bourbon, neat, and refills" do
     flashes_path = %w(app assets stylesheets refills _flashes.scss)
     expect(read_project_file(flashes_path)).to match(/\$flashes/m)
