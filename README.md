@@ -1,7 +1,7 @@
-# Kimoner [![Build Status](https://secure.travis-ci.org/thoughtbot/kimoner.svg?branch=master)](http://travis-ci.org/thoughtbot/kimoner)
+# Kimoner [![Build Status](https://secure.travis-ci.org/KimonTeam/kimoner.svg?branch=master)](http://travis-ci.org/KimonTeam/kimoner)
 
 Kimoner is the base Rails application used at
-[thoughtbot](https://thoughtbot.com/).
+[Kimon](#). It is based on the awesome [suspenders](https://github.com/thoughtbot/suspenders) gem by [thoughtbot](https://thoughtbot.com/).
 
   ![Kimoner boy](http://imageog.flaticon.com/icons/png/512/20/20733.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF)
 
@@ -156,7 +156,7 @@ You can optionally create a GitHub repository for the suspended Rails app. It
 requires that you have [Hub](https://github.com/github/hub) on your system:
 
     curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
-    kimoner app --github organization/project
+    kimoner projectname --github organization/projectname
 
 This has the same effect as running:
 
@@ -193,19 +193,15 @@ PostgreSQL needs to be installed and running for the `db:create` rake task.
 ## Issues
 
 If you have problems, please create a
-[GitHub Issue](https://github.com/thoughtbot/kimoner/issues).
+[GitHub Issue](https://github.com/KimonTeam/kimoner/issues).
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Thank you, [contributors]!
-
-[contributors]: https://github.com/thoughtbot/kimoner/graphs/contributors
-
 ## License
 
-Kimoner is Copyright © 2008-2016 thoughtbot.
+Kimoner is Copyright © 2017 Kimon.
 It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
@@ -215,12 +211,6 @@ and may be redistributed under the terms specified in the [LICENSE] file.
 
 ![thoughtbot](https://thoughtbot.com/logo.png)
 
-Kimoner is maintained and funded by thoughtbot, inc.
+Kimoner is maintained and funded by Kimon.
+It started from the [suspenders](https://github.com/thoughtbot/suspenders) project by [thoughtbot](https://thoughtbot.com/).
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com?utm_source=github
