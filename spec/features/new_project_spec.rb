@@ -36,6 +36,7 @@ RSpec.describe "Suspend a new project with default configuration" do
   end
 
   it "copies dotfiles" do
+    puts Dir.entries(project_path)
     %w[.ctags .env].each do |dotfile|
       expect(File).to exist("#{project_path}/#{dotfile}")
     end
@@ -279,6 +280,7 @@ RSpec.describe "Suspend a new project with default configuration" do
     gemfile = read_project_file("Gemfile")
 
     expect(gemfile).to match(/config/)
+    expect(File).to exist("#{project_path}/config/settings.yml")
   end
 
   it "configures bourbon, neat, and refills" do
