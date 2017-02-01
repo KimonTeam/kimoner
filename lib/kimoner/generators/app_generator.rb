@@ -57,6 +57,7 @@ module Kimoner
       invoke :setup_spring
       invoke :generate_default
       invoke :add_guard
+      invoke :add_flash_types
       invoke :add_settings
       invoke :outro
     end
@@ -232,6 +233,14 @@ module Kimoner
     def add_guard
       run("spring stop")
       generate("kimoner:guard")
+    end
+
+    def add_flash_types
+      config = <<-RUBY
+  add_flash_types :error, :success
+      RUBY
+
+      inject_into_class "app/controllers/application_controller.rb", "ApplicationController", config
     end
 
     def add_settings

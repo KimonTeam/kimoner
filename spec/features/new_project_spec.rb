@@ -270,6 +270,12 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(development_config).to match(/config\.middleware\.insert_after\(ActionDispatch::Static, Rack::LiveReload\)/)
   end
 
+  it "adds custom flash types for :error and :success" do
+    controller = read_project_file("app/controllers/application_controller.rb")
+
+    expect(controller).to match(/add_flash_types :error, :success/)
+  end
+
   it "adds and installs config" do
     gemfile = read_project_file("Gemfile")
 
